@@ -1,0 +1,1 @@
+UPDATE  `getact6_gai_main`.`users` SET  `tshirt_size` =  'l42' WHERE  `tshirt_size` =  'L - 42 in'
