@@ -1,0 +1,15 @@
+.P1{
+	height: 30px;
+	width: 100px;
+}
+.Edit_pageheader{
+    display: block;
+    max-width: 90%;
+    height: auto;
+    text-align: center;
+}
+.noPadding{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 50px;
+}
