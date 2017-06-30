@@ -1,0 +1,423 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GECXPRESS</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fancytabs.css">
+	<script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <style>
+  .circle {
+  margin: 36px;
+  display: inline-block;
+  padding: 16px;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #1d2087;
+}
+.col-sm-2{
+	margin-left:65px;}
+.circle::before,
+.circle::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.circle,
+.circle::before,
+.circle::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.circle {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  border: 2px solid #5c5eae;
+  color: #5c5eae;
+  line-height: 50px;
+  overflow: hidden;
+}
+
+.circle:hover {
+  color: #fff;
+}
+.circle::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+}
+.circle:hover::after {
+  background: #5c5eae;
+  border-radius: 50%;
+  -webkit-transform: scale(.9);
+  transform: scale(.9);
+}
+
+.circle1 {
+  opacity: 0.6;
+}
+
+.circle2 {
+  opacity: 0.6;
+}
+
+.circle3 {
+  opacity: 0.6;
+}
+.circle4 {
+  opacity: 0.6;
+}
+.circle a {
+  text-decoration: none;
+  color: #1d2087;
+}
+
+.circle h2 {
+  font-size: 18px;
+}
+
+.circle h2 small {
+  color: #1d2087;
+}
+
+.circle p {
+  font-size: 20px;
+  line-height: 26px;
+}
+  body, html{
+	height: 100%;
+ 	background-repeat: no-repeat;
+ 	background:url(io.jpg);
+ 	font-family: 'Oxygen', sans-serif;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+.topnav {
+  overflow: hidden;
+  background-color:;
+}
+
+.topnav a {
+  margin-left:140px;
+  float: left;
+  display: block;
+  color: #4f4643;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Franklin Gothic Demii";
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: #f46242;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+  </style>
+</head>
+<body>
+			<nav class="navbar navbar-default" style="color:white;">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+		<a class="navbar-brand" href="GecXpress.html"><img style="max-width:100px; margin-top: 0.5px;"src="" width="20%;" alt=""></a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+				<p>
+				  <li><a href="Sign_up.html"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+				  <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</p>
+				</ul>
+			  </div>
+			</nav>
+			<div class="panel panel danger"><marquee><h4 style="font-family:Franklin Gothic Demii;font-size:20px;">Welcome To GEC-RAIPUR<h4></marquee></div>
+<div class="container-fluid">
+<div class="page-header">
+
+		<div class="topnav" id="myTopnav">
+		  <a style="border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"href="GecXpress.html">Home</a>
+		  <a style="border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"href="#news">News</a>
+		  <a style="border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"href="#contact">Issues</a>
+		  <a style="border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"href="#contact">Feedback</a>
+		  <a style="border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"href="#about">About-Us</a>
+		  <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+</div>
+
+		<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+		</script>
+		<h1></h1>
+		<h6></h6>
+    <div class="jumbotron noPadding">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="Image/cc.jpg" alt="Rogue">
+                    <div class="carousel-caption">
+                        <h4>
+                            Assasins Creed</-h4>
+                            <p>Rogue</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="Image/bb.jpg">
+                    <div class="carousel-caption">
+                        <h3>Bleach</h3>
+                        <p>Control the instinct</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="Image/ab.jpg">
+                    <div class="carousel-caption">
+                        <h3>Bleach</h3>
+                        <p>Control the instinct</p>
+                    </div>
+                </div>
+                
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+	<div class="container">
+			<div class="row">
+				<section class="section_0">
+			  <div class="col-sm-2">
+				
+				<div class="circle circle1">
+				  <a href="#"><h2>News<small></small><p></p></h2></a>
+				</div>
+			  </div>
+			  <div class="col-sm-2">
+				<div class="circle circle2">
+				  <a href="New_Issue.html"><h2>Issues<small></small><p></p></h2></a>
+				</div>
+			  </div>
+			  <div class="col-sm-2">
+				<div class="circle circle3">
+				  <a href="New_Feedback.html"><h2>Feedback<small></small><p></p></h2></a>
+				</div>
+			  </div>
+			  <div class="col-sm-2">
+				<div class="circle circle4">
+				  <a href="New_Suggestion.html"><h2>Suggestion<small></small><p></p></h2></a>
+				</div>
+			  </div>
+			</section>
+			</div>
+		</div>
+		<div class="text-center"><a data-toggle="modal" href="#myModal" class="btn btn-success btn-lg"style="margin-top:5px; role="button">Send Feedback(Miscellaneous)</a>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Feedback(Miscellaneous)</h4>
+        </div>
+        <div class="modal-body">
+          <p><form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Feedback-Title:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter Title" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Feedback-Type:
+	  <h6></h6>
+	   <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Type
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Type1</a></li>
+    <li><a href="#">Type2</a></li>
+    <li><a href="#">Type3</a></li>
+    <li><a href="#">Type4</a></li>
+    <li><a href="#">Type5</a></li>
+  </ul>
+  </label>
+</div> 
+    </div>
+    <div class="form-group">
+      <label for="pwd">Rating:
+	  <label class="radio-inline">
+      <input type="radio" name="optradio">Positive
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Negative
+    </label>
+	</label>
+    </div>
+    <div class="form-group">
+      <label for="comment">Feedback:</label>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div> 
+ <a href="#" button type="submit" class="btn btn-primary">Submit</button></a>
+  </form></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+        <a data-toggle="modal" href="#myModal2" class="btn btn-primary btn-lg"style="margin-top:5px;" role="button">Send Feedback(Teacher Assesment)</a>
+		 <!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Issue(Non-technical)</h4>
+        </div>
+        <div class="modal-body">
+		  <p>
+ <a href="#" button type="submit" class="btn btn-primary">Submit</button></a>
+		  </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+		</div>
+		<p></p>
+		<div class="text-center"><a href="#" class="btn btn-info btn-lg" role="button">View Feedback</a></div>
+		<hr>
+	<div class="col-xs-4 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-image">
+                    <img src="g.jpg " width="100%" class="panel-image-preview" />
+                    <label for="toggle-4"></label>
+                </div>
+                <div class="panel-body">
+                    <h4>Show the Description by default!</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
+                </div>
+                <div class="panel-footer text-center">
+                    <a href="#download"><span class="glyphicon glyphicon-download"></span></a>
+                    <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                    <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                    <a href="#share"><span class="glyphicon glyphicon-share-alt"></span></a>
+                </div>
+            </div>
+    </div>
+	
+		<div class="col-xs-4 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-image">
+                    <img src="g.jpg " width="100%" class="panel-image-preview" />
+                    <label for="toggle-4"></label>
+                </div>
+                <div class="panel-body">
+                    <h4>Show the Description by default!</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
+                </div>
+                <div class="panel-footer text-center">
+                    <a href="#download"><span class="glyphicon glyphicon-download"></span></a>
+                    <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                    <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                    <a href="#share"><span class="glyphicon glyphicon-share-alt"></span></a>
+                </div>
+            </div>
+    </div>
+			<div class="col-xs-4 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-image">
+                    <img src="g.jpg " width="100%" class="panel-image-preview" />
+                    <label for="toggle-4"></label>
+                </div>
+                <div class="panel-body">
+                    <h4>Show the Description by default!</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
+                </div>
+                <div class="panel-footer text-center">
+                    <a href="#download"><span class="glyphicon glyphicon-download"></span></a>
+                    <a href="#facebook"><span class="fa fa-facebook"></span></a>
+                    <a href="#twitter"><span class="fa fa-twitter"></span></a>
+                    <a href="#share"><span class="glyphicon glyphicon-share-alt"></span></a>
+                </div>
+            </div>
+    </div>
+	<h3></h3>
+	<div class="container">
+	<img class="img-responsive" style="padding-top:8%;"src="header.jpg" alt="" width="100%" height="20">
+	<h2 style="margin-left:20px;color:white;"><marquee>Quote of the day:"We Are on the Hunt for which we have not become Yet."</marquee></h2>
+	</div>
+	</div>
+	</div>
+	<div class="page-header">
+	<h4>  </h4>
+	</div>
+	<footer>
+	<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<p class="text-center" style="padding:10px;color:black;font-size:20px;">&copy Copyright Reserved By Code-Club(GEC RAIPUR)</p>
+				</div>
+	</footer>
+	</div>
+
+</body>
+</html>
